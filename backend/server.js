@@ -68,7 +68,10 @@ app.use('/api/homepage-settings', homepageSettingsRoutes);
 app.get('/api/health', (req, res) => {
   res.status(200).json({ message: 'Server is running!' });
 });
-
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://comfy-starburst-d986a7.netlify.app/', // Replace with your actual Netlify URL
+}));
 // Error handling middleware
 app.use(errorHandler);
 
