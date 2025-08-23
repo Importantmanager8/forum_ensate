@@ -3,10 +3,10 @@ import { useAuth } from '../context/AuthContext';
 import { useState as useReactState } from 'react';
 import { Clock, MapPin, Users, CheckCircle, AlertCircle, Calendar } from 'lucide-react';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 // Create an axios instance with interceptor for API calls
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: API_BASE_URL,
   withCredentials: true,
   timeout: 10000,
 });

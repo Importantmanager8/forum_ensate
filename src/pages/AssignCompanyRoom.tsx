@@ -11,10 +11,10 @@ interface Room {
   name: string;
   // location: string; // Remove location
 }
-
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 // Create an axios instance with interceptor for rooms
 const roomApi = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: API_BASE_URL,
   withCredentials: true,
   timeout: 10000,
 });
@@ -35,7 +35,7 @@ const AssignCompanyRoom = () => {
 
   useEffect(() => {
     axios.get(API_COMPANIES, {
-      baseURL: 'http://localhost:5000/api',
+      baseURL: API_BASE_URL,
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
     }).then(res => {
       // Defensive: handle both array and object response
