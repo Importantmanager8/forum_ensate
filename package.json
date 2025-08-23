@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"nodemon index.js\"",
+    "start": "node index.js",
     "server": "nodemon backend/server.js",
     "client": "vite",
     "build": "vite build",
