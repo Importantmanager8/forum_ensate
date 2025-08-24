@@ -6,10 +6,6 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
-   preview: {
-    allowedHosts: [
-      'https://glorious-upliftment-production-3c02.up.railway.app', 
-    ],
-  },
+   
   base: './', 
 })
