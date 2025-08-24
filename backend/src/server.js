@@ -69,7 +69,7 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ message: 'Server is running!' });
 });
 app.use(cors({
-  origin: 'https://comfy-starburst-d986a7.netlify.app/', // Replace with your actual Netlify URL
+  origin: 'https://glorious-upliftment-production-3c02.up.railway.app', // Replace with your actual Netlify URL
 }));
 // Error handling middleware
 app.use(errorHandler);
